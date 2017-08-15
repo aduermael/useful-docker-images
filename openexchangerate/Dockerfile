@@ -8,5 +8,7 @@ FROM alpine:3.6
 RUN apk add ca-certificates --update
 COPY --from=0 /app/app /bin/app
 
+EXPOSE 80 
+
 ENTRYPOINT ["app"]
 
